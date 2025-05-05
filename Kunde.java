@@ -7,9 +7,9 @@ public class Kunde {
     
     public Kunde(String pkvorname, String pknachname, char pKategorie){
         
-        pkvorname = kvorname;
-        pknachname = knachname;
-        pKategorie = kundenkategorie;
+        kvorname = pkvorname;
+        knachname = pknachname;
+        kundenkategorie = pKategorie;
         
     }
     

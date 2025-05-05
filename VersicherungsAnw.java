@@ -18,20 +18,24 @@ public class VersicherungsAnw
     }
 
     public void berechneKundenbeiträge(){
+        gesBeitrag = 0;
         for(int i = 0; i < kunden.length;i++){
             char kat = kunden[i].getKat();
-            gesBeitrag = 0;
+            
             if(kat == 'A'){
-                gesBeitrag = +50;
+                System.out.println(kunden[i].kvorname+" "+kunden[i].knachname+" + 50 €");
+                gesBeitrag +=50;
             }
             if(kat == 'B'){
-                gesBeitrag = +30;
+                System.out.println(kunden[i].kvorname+" "+kunden[i].knachname+" + 30 €");
+                gesBeitrag +=30;
             }
             if(kat == 'C'){
-                gesBeitrag = +10;
+                System.out.println(kunden[i].kvorname+" "+kunden[i].knachname+" + 10 €");
+                gesBeitrag +=10;
             }
         }
-        
-        System.out.println(gesBeitrag);
+        System.out.println("»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»");
+        System.out.println("Insgesamt: "+gesBeitrag+" €");
     }
 }
