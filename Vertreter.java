@@ -13,6 +13,7 @@ public class Vertreter extends Mitarbeiter
 
     
     public Vertreter(){
+        versicherungsAnw1 = new VersicherungsAnw();
         kundenansprache = "Hallo ich bin " + vorname+" "+nachname+" Ihre Versicherung ist zu teuer, bei uns zahlen Sie weniger !";
     }
     
@@ -30,7 +31,7 @@ public class Vertreter extends Mitarbeiter
     public void überzeugeKunde(){
         System.out.println(kundenansprache);
         boolean erfolg = getRandomBoolean();
-        if(erfolg){
+        if(true){
             System.out.println("Platzhalter");
             
             Scanner scanner = new Scanner(System.in);
@@ -42,12 +43,13 @@ public class Vertreter extends Mitarbeiter
             String knachname = scanner.nextLine();
             
             System.out.println("Kategorie (A, B, oder C): ");
-            char kundenkategorie = scanner.nextLine().toUpperCase().charAt(0);
+            String text = scanner.nextLine();
+            char kate = text.toUpperCase().charAt(0);
             
-            
+            versicherungsAnw1.kundeHinzufügen(kvorname,knachname,kate);
             
         }
-        if(!erfolg){
+        else if(!erfolg){
             System.out.println("Schade, dass ich Sie nicht überzeugen konnte.");
             System.out.println("Falls Sie sich um entscheiden sollten gebe ich Ihnen meine Nummer.");
         }

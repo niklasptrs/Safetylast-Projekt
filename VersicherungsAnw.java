@@ -3,6 +3,7 @@
 public class VersicherungsAnw
 {
     Kunde kunde1;
+    int kundennummer = 4;
     
     private Kunde [] kunden;
     
@@ -10,16 +11,35 @@ public class VersicherungsAnw
     
     public VersicherungsAnw()
     {
-        kunden = new Kunde [4];
+        
+        kunden = new Kunde [100];
         kunden[0]= new Kunde("Felix","Porcynski", 'C');
         kunden[1]= new Kunde("David","Schulz", 'A');
         kunden[2]= new Kunde("Fritz","Müller",'B');
         kunden[3]= new Kunde("Ben","Meier",'B');
     }
+    
+    public void kundeHinzufügen(String pVorname, String pNachname, char pKategorie){
+        
+        
+        
+        
+        String Vorname = pVorname;
+        String Nachname = pNachname;
+        char Kategorie = pKategorie;
+        
+        kunden[4]= new Kunde(Vorname,Nachname,Kategorie);
+        
+        kundennummer ++;
+    }
 
     public void berechneKundenbeiträge(){
         gesBeitrag = 0;
         for(int i = 0; i < kunden.length;i++){
+            
+            if(kunden[i] == null){
+                continue;
+            }
             char kat = kunden[i].getKat();
             
             if(kat == 'A'){
