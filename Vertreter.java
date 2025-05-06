@@ -46,7 +46,7 @@ public class Vertreter extends Mitarbeiter
             String text = scanner.nextLine();
             char kate = text.toUpperCase().charAt(0);
             
-            versicherungsAnw1.kundeHinzufügen(kvorname,knachname,kate);
+            versicherungsAnw1.kundeHinzufügen(kvorname, knachname, kate);
             
         }
         else if(!erfolg){

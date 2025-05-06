@@ -28,7 +28,7 @@ public class VersicherungsAnw
         String Nachname = pNachname;
         char Kategorie = pKategorie;
         
-        kunden[4]= new Kunde(Vorname,Nachname,Kategorie);
+        kunden[kundennummer]= new Kunde(Vorname,Nachname,Kategorie);
         
         kundennummer ++;
     }
