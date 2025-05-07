@@ -2,4 +2,10 @@
 comment0.target=VersicherungsAnw
 comment1.params=
 comment1.target=VersicherungsAnw()
-numComments=2
+comment2.params=pVorname\ pNachname\ pKategorie
+comment2.target=void\ kundeHinzuf\u00FCgen(java.lang.String,\ java.lang.String,\ char)
+comment3.params=
+comment3.target=void\ \u00FCberzeugeKunde()
+comment4.params=
+comment4.target=void\ berechneKundenbeitr\u00E4ge()
+numComments=5

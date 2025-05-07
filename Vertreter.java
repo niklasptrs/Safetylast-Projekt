@@ -4,21 +4,24 @@ public class Vertreter extends Mitarbeiter
 {
 
     Kunde kunde1;
-    
+
     VersicherungsAnw anw = new VersicherungsAnw();
     VersicherungsAnw versicherungsAnw1;
-    String kundenansprache;
-    
-    
 
-    
+    String vorname = "Bastian";
+    String nachname = "Menzenbach";
+    String ortsbereich = "Mühlheim";
+    String kundenansprache = "Hallo ich bin " + vorname+" "+nachname+" Ihre Versicherung ist zu teuer, bei uns zahlen Sie weniger !";
     public Vertreter(){
+        vorname = "Bastian";
+        nachname = "Menzenbach";
+        ortsbereich = "Mühlheim";
         versicherungsAnw1 = new VersicherungsAnw();
         kundenansprache = "Hallo ich bin " + vorname+" "+nachname+" Ihre Versicherung ist zu teuer, bei uns zahlen Sie weniger !";
     }
-    
+
     public void t(){
-        
+
     }
 
     /*
@@ -31,23 +34,23 @@ public class Vertreter extends Mitarbeiter
     public void überzeugeKunde(){
         System.out.println(kundenansprache);
         boolean erfolg = getRandomBoolean();
-        if(true){
+        if(erfolg){
             System.out.println("Platzhalter");
-            
+
             Scanner scanner = new Scanner(System.in);
-            
+
             System.out.println("Vorname: ");
             String kvorname = scanner.nextLine();
-            
+
             System.out.println("Nachname: ");
             String knachname = scanner.nextLine();
-            
+
             System.out.println("Kategorie (A, B, oder C): ");
             String text = scanner.nextLine();
             char kate = text.toUpperCase().charAt(0);
-            
+
             versicherungsAnw1.kundeHinzufügen(kvorname, knachname, kate);
-            
+
         }
         else if(!erfolg){
             System.out.println("Schade, dass ich Sie nicht überzeugen konnte.");
